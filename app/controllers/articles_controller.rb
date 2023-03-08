@@ -5,4 +5,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id]) # @ makes a varaible and instance variable
   end
 
+  def index
+    @articles = Article.all
+  end
+
 end
