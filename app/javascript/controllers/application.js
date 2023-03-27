@@ -6,4 +6,11 @@ const application = Application.start()
 application.debug = false
 window.Stimulus   = application
 
+const webpack = require("webpack")
+environment.plugins.append("Provide", new webpack.ProvidePlugin({
+  $: 'jquery',
+  jQuery: 'jquery',
+  Popper: ['popper.js', 'default']
+}))
+
 export { application }
